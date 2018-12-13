@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Hey, there ! </title>
+</head>
+<body>
+        <h2>Here are all the users:</h2>
+        <% for (var x in users) { %>
+            <h3>Name: <%= users[x].name %></h3>
+            <h4>Email: <%= users[x].email %></h4>
+            <hr>
+        <% } %>
+</body>
+</html>
