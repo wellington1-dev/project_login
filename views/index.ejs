@@ -1,16 +1,46 @@
-<h1>Hello from index Page</h1>
+<!DOCTYPE html>
+<html>
 
-<h3> Add a new Customer: </h3>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Main Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
 
-<form method="POST" action="/user">
-    <label>First name:</label> <input type="text" name="first_name"><br>
-    <label>Last name:</label> <input type="text" name="last_name""><br>
-    <label>Email:  </label> <input type=" text" name="email"><br>
-    <input type="submit" value="Submit">
-</form>
+<body>
+    <h1>Registration</h1>
 
-<form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
-</form>
+    <h3> Add a new Customer: </h3>
+
+    <form method="POST" action="/user">
+        <label>First name:</label> <input type="text" name="first_name"><br>
+        <label>Last name:</label> <input type="text" name="last_name""><br>
+            <label>Email:  </label> <input type="
+            text" name="email"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+    <h4> Are You already registered? </h4>
+
+    <h1>Login</h1>
+
+    <form method="POST" action="/login">
+        <p>
+            <label>Username:</label>
+            <input type="text" name="userName">
+        </p>
+        <p>
+            <label>Password:</label>
+            <input type="text" name="password">
+        </p>
+        <p>
+            <input type="submit" value="Login">
+        </p>
+    </form>
+
+</body>
+
+</html>
