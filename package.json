@@ -13,6 +13,7 @@
     "balanced-match": "^1.0.0",
     "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
+    "bootstrap": "file:bootstrap",
     "ejs": "^2.6.1",
     "exports": "0.0.1",
     "express": "^4.16.4",
@@ -20,14 +21,17 @@
     "express-session": "^1.15.6",
     "express-validator": "^5.3.0",
     "flash": "^1.1.0",
+    "forms": "^1.3.0",
     "hash": "^0.2.1",
     "http-server": "^0.11.1",
     "module": "^1.2.5",
     "modules": "^0.4.0",
     "mongoose": "^5.3.15",
     "multer": "^1.4.1",
+    "nodemon": "^1.18.9",
     "passport": "^0.4.0",
     "passport-http": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "session": "^0.1.0"
   }
 }

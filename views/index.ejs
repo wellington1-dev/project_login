@@ -6,40 +6,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Main Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+<style>
+    .errors{
+        font-family:serif;
+        font-size: 10px;
+        color: red;
+    
+
+    }
+    h1{
+        text-align: center;
+    }
+</style>
 
 <body>
-    <h1>Registration</h1>
-
-    <h3> Add a new Customer: </h3>
-
-    <form method="POST" action="/user">
-        <label>First name:</label> <input type="text" name="first_name"><br>
-        <label>Last name:</label> <input type="text" name="last_name""><br>
-            <label>Email:  </label> <input type="
-            text" name="email"><br>
-        <input type="submit" value="Submit">
-    </form>
+<h1>Registration </h1>
+    <div class="container">
     <hr>
-    <h4> Are You already registered? </h4>
+    
+    
+    <div class="row justify-content-center">
+    <div class="col-md-6">
+    <div class="card">
+    <header class="card-header">
+        <a href="/loginPage" class="float-right btn btn-outline-primary mt-1">Log in</a>
+        <h4 class="card-title mt-2">Sign up</h4>
+    </header>
+    <article class="card-body">
+    <form method="POST" action="/registration">
+        <div class="form-row">
+            <div class="col form-group">
+                <label>First name </label>   
+                  <input type="text" class="form-control" placeholder="" name="first_name">
+            </div> <!-- form-group end.// -->
+            <div class="col form-group">
+                <label>Last name</label>
+                  <input type="text" class="form-control" placeholder=" " name="last_name">
+            </div> <!-- form-group end.// -->
+        </div> <!-- form-row end.// -->
+        <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control" placeholder="" name="userName">
+            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div> <!-- form-group end.// -->
+        
+        <div class="form-row">
+            <div class="form-group col-md-6">
+            </div> <!-- form-group end.// -->
+            <div class="form-group col-md-6">
+              
+              </select>
+            </div> <!-- form-group end.// -->
+        </div> <!-- form-row.// -->
+        <div class="form-group">
+            <label>Create password</label>
+            <input class="form-control" type="password"name="password">
 
-    <h1>Login</h1>
+        </div> <!-- form-group end.// --> 
 
-    <form method="POST" action="/login">
-        <p>
-            <label>Username:</label>
-            <input type="text" name="userName">
-        </p>
-        <p>
-            <label>Password:</label>
-            <input type="text" name="password">
-        </p>
-        <p>
-            <input type="submit" value="Login">
-        </p>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block"> Sign Up  </button>
+        </div> <!-- form-group// -->      
+        <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>                                          
     </form>
+    <div class="errors">
+            <p>  <% if(messages.errors) { %>
+                   <% for (var x of messages.errors) { %>
+                    <h3><%= x.msg %></h3>
+                   <% } %>
+               <% } %>
+           </p> 
+       </div>
+    </article> <!-- card-body end .// -->
+    <div class="border-top card-body text-center">Have an account? <a href="/loginPage">Log In</a></div>
+    </div> <!-- card.// -->
+    </div> <!-- col.//-->
+    
+    </div> <!-- row.//-->
+    
+    
+    </div> 
 
 </body>
 
